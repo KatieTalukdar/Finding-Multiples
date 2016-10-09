@@ -30,7 +30,7 @@ class ViewController: UIViewController {
   
    //Actions
     
-    @IBAction func whenPlay(sender: UIButton!) {
+    @IBAction func whenPlay(_ sender: UIButton!) {
     
     if askerTxt.text != nil && askerTxt.text != "" {
         num = Int(askerTxt.text!)!
@@ -42,13 +42,13 @@ class ViewController: UIViewController {
     }
     }
     
-    @IBAction func addPressed(sender: UIButton!) {
+    @IBAction func addPressed(_ sender: UIButton!) {
         
         if times < 10 {
             let oldMultiple = currentMultiple
             currentMultiple = currentMultiple + num
         pressLabel.text = "\(oldMultiple) + \(num)= \(currentMultiple)"
-            times++
+            times += 1
             
             NSLog("\(times)")
         }else {
@@ -61,12 +61,12 @@ class ViewController: UIViewController {
     
     func changeHiding()
     {
-        multipleImg.hidden = !multipleImg.hidden
-        playBtn.hidden = !playBtn.hidden
-        askerTxt.hidden = !askerTxt.hidden
+        multipleImg.isHidden = !multipleImg.isHidden
+        playBtn.isHidden = !playBtn.isHidden
+        askerTxt.isHidden = !askerTxt.isHidden
         
-        pressLabel.hidden = !pressLabel.hidden
-        addBtn.hidden = !addBtn.hidden
+        pressLabel.isHidden = !pressLabel.isHidden
+        addBtn.isHidden = !addBtn.isHidden
         
     }
     
